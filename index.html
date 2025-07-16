@@ -8,7 +8,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=1.0.3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Caveat:wght@400..700&family=My+Soul&family=Parisienne&family=Sacramento&display=swap"
+        rel="stylesheet">
 
 
 </head>
@@ -16,9 +20,10 @@
     :root {
         --primary-color: #6C7A89;
         /* Azul grisáceo */
-        --secondary-color: #ADD8E6;
+        --secondary-color: #5e95af;
         /* Azul cielo */
-        --tertiary-color: #002D62;
+        --tertiary-color: #000a14;
+        --four-color: #00254e;
         /* Azul petróleo */
         --text-dark: #333;
         --text-light: #f9f9f9;
@@ -183,10 +188,11 @@
     }
 
     .section.hero {
-        padding: 100px 30px;
+        padding: 100px 40px;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        background: linear-gradient(135deg, var(--tertiary-color), var(--secondary-color));
+        background: linear-gradient(135deg, var(--tertiary-color) 0%, var(--four-color) 30%, var(--secondary-color) 100%);
+
     }
 
 
@@ -273,10 +279,9 @@
     }
 
     .names {
-        font-family: 'Playfair Display', serif;
-        font-size: 3.5em;
+        font-family: "Allura", cursive;
+        font-style: Bold;
         color: var(--white);
-        margin: 25px 0;
         text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
         animation: slideInLeft 1.5s ease-out;
         position: relative;
@@ -297,6 +302,9 @@
 
     .names span {
         display: block;
+        font-size: 50px;
+        font-style: bold;
+        margin-bottom: -6%;
     }
 
     .ampersand {
@@ -316,6 +324,16 @@
         animation: slideInDown 1s ease-out;
     }
 
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.8em;
+        color: var(--tertiary-color);
+        position: relative;
+        display: inline-block;
+        animation: slideInDown 1s ease-out;
+        padding-bottom: 50px;
+    }
+
     @keyframes slideInDown {
         from {
             transform: translateY(-50px);
@@ -333,6 +351,19 @@
         position: absolute;
         left: 50%;
         bottom: -15px;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(to right, var(--secondary-color), var(--tertiary-color));
+        border-radius: 2px;
+        animation: expandLine 1.5s ease-out forwards;
+    }
+
+    h1::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
         transform: translateX(-50%);
         width: 80px;
         height: 4px;
@@ -823,7 +854,7 @@
         top: -120px;
         /* sube la imagen 100px por encima del borde superior */
         left: -120px;
-        width: 300px;
+        width: 270px;
         max-height: none;
         /* elimina limitación de altura */
         height: auto;
@@ -843,12 +874,12 @@
     <div class="container">
         <section class="section hero water-section">
             <canvas class="starry-bg"></canvas>
-            <h1>¡El Gran Día Se Acerca!</h1>
+            <h1>¡ Nuestro Sí Para Siempre !</h1>
             <p>Con el corazón lleno de amor, los invitamos a compartir la alegría de nuestra unión.</p>
             <div class="names">
-                <span>[Nombre de la Novia]</span>
+                <span>Stefanny Guacas</span>
                 <span class="ampersand">&</span>
-                <span>[Nombre del Novio]</span>
+                <span>Oscar Castro</span>
             </div>
         </section>
 
@@ -900,10 +931,12 @@
                         src="https://1drv.ms/i/c/877bec01de16f337/IQS8pfMVF9IaS5ZvURreorFEAZ-RTWI0qD7dXweabwLK9PY"
                         alt="Foto 4"></div>
                 <div class="gallery-item"><img
-                        src="https://1drv.ms/i/c/877bec01de16f337/IQSvL_ZuO0z6QbOGuPatNDSRAYgzwBBhk8_UXMq9UBX2hEE" alt="Foto 5">
+                        src="https://1drv.ms/i/c/877bec01de16f337/IQSvL_ZuO0z6QbOGuPatNDSRAYgzwBBhk8_UXMq9UBX2hEE"
+                        alt="Foto 5">
                 </div>
                 <div class="gallery-item"><img
-                        src="https://1drv.ms/i/c/877bec01de16f337/IQSXork0Vv_mS4lXdRG3q_i6AX2FG8yI98MPB1xXLrzXAP4" alt="Foto 6">
+                        src="https://1drv.ms/i/c/877bec01de16f337/IQSXork0Vv_mS4lXdRG3q_i6AX2FG8yI98MPB1xXLrzXAP4"
+                        alt="Foto 6">
                 </div>
             </div>
         </section>
